@@ -1,9 +1,110 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+  margin:auto;
+  margin-top: 30px;
+  background-color: #FFB140;
 }
-th {
-  text-align: left;
+
+.container {
+  display:inline-block;
+}
+
+.racer_table {
+  margin:auto;
+}
+
+.starting-position {
+  margin:auto;
+}
+
+#turtle-wins {
+  display:inline-block;
+  width:30%;
+  vertical-align: 150px;
+}
+
+#turtle-wins, #rabbit-wins  {
+  text-align: center;
+  font-family: serif;
+  color: green;
+  font-size: 100px;
+}
+
+#rabbit-wins {
+  display:inline-block;
+  width:30%;
+  text-align:center;
+  vertical-align: 150px;
+}
+
+.hidden-time {
+  display:none;
+}
+
+.results {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+ol {
+  padding: 0px;
+}
+
+
+.winning-form {
+  display:inline;
+  font-size:20px;
+} 
+
+input {
+  width:60px;
+  text-align: center;
+}
+
+.button {
+  display:block;
+  margin:auto;
+  margin-top:10px;
+  width:80px;
+}
+
+
+td {
+  border:solid black 1px;
+  width:60px;
+  height:60px;
+  background-color: gray;
+}
+
+#starting_line {
+  height: 25px;
+  width: 80px;
+}
+
+.start-line {
+  text-align:center;
+/*  margin-top:0px;
+  margin-bottom:0px;*/
+}
+
+p {
+  margin:0 0 0 0px;
+}
+
+.finish-line {
+  text-align:center;
+}
+
+.final-position {
+  margin:auto;
+}
+
+.turtle {
+  background-image: url("/turtle.jpeg");
+}
+
+.rabbit {
+  background-image: url("/rabbit.jpeg");
 }

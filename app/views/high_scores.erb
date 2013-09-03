@@ -1,0 +1,12 @@
+<div class="results">
+<h1>Fastest Times</h1>
+
+<ol>
+<% Game.all.order('track_time').limit(20).each do |game| %>
+  <li><%= game.winner %>  - - - - - <%= (game.track_time) / 1000.0 %> seconds</li>
+  <% end %>
+</ol>
+
+<a href="/">New Game</a>
+
+</div>

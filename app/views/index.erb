@@ -1,23 +1,99 @@
-<div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+<!DOCTYPE html>
+<html lang="en">
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="/css/application.css">
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+  <script src="/js/application.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="turtle-wins">
+  <img src="/crown.jpg">
+  <p>Turtle Wins!</p>
+  <div class="winning-form">
+  <form action="/high_scores" method="POST">
+      <input class="hidden-time" name="track_time"></input>
+      <label for="initials">Enter Initials:  </label><input type="text" name="initials" placeholder="AAA"></input>
+      <input class="button" type="submit" value="Submit"></input>
+    </form>
+  </div>
 </div>
+<div class="container">
+<table class="starting-position">
+  <tr>
+    <td class="turtle"></td>
+    <td class="rabbit"></td>
+  </tr>
+</table>
+<div class="start-line">
+  <p>START</p>
+</div>
+<table class="racer_table">
+  <tr id="1">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="2">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="3">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="4">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="5">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="6">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="7">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="8">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="9">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="10">
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<div class="finish-line">
+  <p>FINISH</p>
+</div>
+<table class="final-position">
+  <tr id="11">
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</div>
+<div id="rabbit-wins">
+  <img src="/crown.jpg">
+  <p>Rabbit Wins!</p>
+  <div class="winning-form">
+  <form action="/high_scores" method="POST">
+      <label for="initials">Enter Initials:  </label><input type="text" name="initials" placeholder="AAA"></input>
+      <input class="button" type="submit" value="Submit"></input>
+      <input class="hidden-time" name="track_time"></input>
+    </form>
+  </div>
+</div>
+<div class="time"></div>
+</body>
+</html>
+
+
