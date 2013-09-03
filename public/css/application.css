@@ -18,7 +18,7 @@ body {
 
 #turtle-wins {
   display:inline-block;
-  width:30%;
+  width:40%;
   vertical-align: 150px;
 }
 
@@ -46,12 +46,20 @@ body {
 
 li {
   list-style: none;
+  text-align:center;
 }
 
 ol {
-  padding: 0px;
+  padding: 0;
+  line-height:40px;
+  letter-spacing:5px;
 }
 
+
+.marquee {
+  height:500px;
+  margin-bottom:30px;
+}
 
 .winning-form {
   display:inline;
@@ -90,7 +98,7 @@ td {
 }
 
 p {
-  margin:0 0 0 0px;
+  margin:0 0 0 0;
 }
 
 .finish-line {

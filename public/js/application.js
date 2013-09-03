@@ -8,7 +8,6 @@ $(document).ready(function() {
   $(document).on('keyup',function(key){
     if ( beginTime === '' ) {
       beginTime = new Date();
-      console.log(beginTime)
     }
     if (turtleCounter < 11 && rabbitCounter < 11) {
       switch(parseInt(key.which,10)) {
@@ -17,38 +16,43 @@ $(document).ready(function() {
         // console.log(keycode);
 
           case 65:
-            turtleCounter += 1
-
-
-            // console.log(turtleCounter);
+            turtleCounter += 1;
+            if(turtleCounter === 11 && turtleCounter < 12){
+              if ( endTime === '' ) {
+                endTime = new Date();
+                var finalTime = endTime - beginTime;
+              }
+              $('.turtle').removeClass();
+              $('#' + turtleCounter).find("td").first().addClass('turtle');
+              $(".winning-form input").first().attr("value",finalTime);
+              $("#turtle-wins p, #turtle-wins img, #turtle-wins form").show();
+              break;
+            }
+            else {
+            console.log(turtleCounter);
             $('.turtle').removeClass();
             $('#' + turtleCounter).find("td").first().addClass('turtle');
-            break;
+            break;}
           case 76:
-            rabbitCounter += 1
+            rabbitCounter += 1;
+            if(rabbitCounter === 11 && rabbitCounter < 12){
+              if ( endTime === '' ) {
+                endTime = new Date();
+                var finalTime = endTime - beginTime;
+              }
+              $('.rabbit').removeClass();
+              $('#' + rabbitCounter).find("td").last().addClass('rabbit');
+              $(".winning-form input").last().attr("value",finalTime);
+              $("#rabbit-wins p, #rabbit-wins img, #rabbit-wins form").show();
+              break;
+            }
+            else {
             // console.log(turtleCounter);
             $('.rabbit').removeClass();
             $('#' + rabbitCounter).find("td").last().addClass('rabbit');
             
-            break;
-          // default:
-          //   break;
-        };
-    }
-    else {
-      if ( endTime === '' ) {
-        endTime = new Date();
-        var finalTime = endTime - beginTime;
-        console.log(finalTime)
-      } ;
-      if(turtleCounter > 10 && turtleCounter < 12){
-        $(".winning-form input").first().attr("value",finalTime);
-        $("#turtle-wins p, #turtle-wins img, #turtle-wins form").show();
+            break;}
+          }
       }
-      else if(rabbitCounter > 10 && rabbitCounter < 12){
-        $(".winning-form input").last().attr("value",finalTime);
-        $("#rabbit-wins p, #rabbit-wins img, #rabbit-wins form").show();
-      }
-    }
   });
 });
